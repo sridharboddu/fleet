@@ -83,11 +83,14 @@
 .con{
   color:#c9c5c5;
 }
-.btn{
-  background-color: #1de9b6;
+.w-btn{
+  background-color: #1de9b6 !important;
 }
 .btn:hover{
   background-color:#1de9b6;
+}
+.lab{
+  color:black !important;
 }
 .w-btn{
   width:400px;

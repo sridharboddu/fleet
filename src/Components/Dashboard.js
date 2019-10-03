@@ -16,7 +16,7 @@ export default class Dashboard extends Component {
          {/* <label class="label-icon" for="search"><i class="material-icons">search</i></label>  */}
          <i className="material-icons prefix">search</i>
          <input id="search" type="text" style={{width:'300px'}} placeholder="Search"  required/>
-         <a className="waves-effect waves-light btn white black-text">Search</a>
+         <a className="waves-effect waves-light btn white black-text btn-sch">Search</a>
        </div>
      </form>
        </li>

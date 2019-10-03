@@ -20,7 +20,7 @@ import Axios from 'axios';
      let email=this.state.email;
      let password=this.state.password;
     
-     Axios.post("https://fleet-tracking4.herokuapp.com/rest-auth/login/",{email,password})
+     Axios.post("https://fleet-tracking-app.herokuapp.com/rest-auth/login/",{email,password})
      .then(resp=>{console.log(resp.data)
         localStorage.setItem("token",resp.data.key)
         this.props.history.push("/Map")
@@ -42,7 +42,7 @@ import Axios from 'axios';
                <div className="row ma-in">
                  <div className="input-field log-input col s12">
                    <input  className="email" name="email" className="box1" placeholder="Email or Mobile Number" onChange={this.handleChange}/>
-                   <label className="active">Email or Mobile Number</label>
+                   <label className="active lab">Email or Mobile Number</label>
                  </div>
                </div>
                <br/>
@@ -56,14 +56,14 @@ import Axios from 'axios';
                  <span className="">Forgot Password?</span>
                </div>
                <div className="btnn">
-            <button className="waves-effect waves-light btn center-align w-btn" onClick={this.loginHandler}>Sign In</button>
+            <button className=" btn center-align w-btn" onClick={this.loginHandler}>Sign In</button>
                </div>
                 <div className="T-c">
                   <span className="con">By clicking Sign In you agree to our <b className=" tex">Terms & Condition</b> and <b className="tex">Privacy Policy</b></span>
                 </div>
                 <hr className="hr-text" data-content="or"></hr>
                 <div className="btn1">
-               <a className="waves-effect waves-light btn center-align w-btn">Register</a>
+               <a className=" btn center-align w-btn">Register</a>
                </div>
               
                </div>

@@ -9,6 +9,9 @@
     height: 520px;
     width: 4%;
 }
+.btn-sch{
+    color:white;
+}
 .sym{
     margin-top: 20px;
     /* height: 100px; */
@@ -67,12 +70,13 @@ padding:6px;
 }
 .text{
     font-family:"Proxima Nova";
-    color:grey;
+    color:#585656;
     font-weight:bold;
+    font-size:25px
 }
 .details{
     font-family:"Proxima Nova";
-    color:grey;
+    color:#757575;
     font-weight:bold;
 }
 .img1{

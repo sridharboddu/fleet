@@ -32,15 +32,9 @@ class Dashboard extends React.Component {
         <TileLayer
           url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
         />
-          {
-            this.state.data.map(i=>(
-              <div>
-                <Marker position={[16,78]}>
-                  <Popup>HYDERABAD</Popup>
-                </Marker>
-              </div>
-            ))
-          }
+          <Marker position={[16,78]}>
+            <Popup>Hyderabad</Popup>
+          </Marker>
       </LeafletMap>
     );
   }
