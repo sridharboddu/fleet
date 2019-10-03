@@ -1,0 +1,103 @@
+
+.main{
+    background-color:#c9c5c5;
+}
+.row .col.s1{
+
+    background-color:white;
+    position:absolute;
+    height: 520px;
+    width: 4%;
+}
+.sym{
+    margin-top: 20px;
+    /* height: 100px; */
+}
+.symbol{
+    margin-top: 20px;
+}
+
+.nav-wrapper{
+    background-color: white;
+}
+.side{
+    /* background-color:teal; */
+    width: 100%;
+  
+}
+.input-field .prefix{
+    top:0rem;
+}
+.inp-hgt{
+height: 15px !important;
+}
+
+.code{
+padding:6px;
+}
+.brand-logo{
+    color:grey !important;
+}
+.row .col.s3{
+   margin-left:74px;
+}
+
+.input-field{
+    position:relative;
+    left:100px;
+}
+.holder{
+    width:250px !important;
+}
+.container{
+    margin-top:20px;
+    margin-left:120px;
+    width:1031px;
+    height:500px;   
+}
+.card-content{
+  /* margin-top:40px;  */
+  background-color:white;
+  /* width:500px; */
+  /* height:420px; */
+}
+
+.note{
+    line-height:40px;
+}
+.text{
+    font-family:"Proxima Nova";
+    color:grey;
+    font-weight:bold;
+}
+.details{
+    font-family:"Proxima Nova";
+    color:grey;
+    font-weight:bold;
+}
+.img1{
+    margin-left: 10px;
+}
+.small-card{
+    border:1px solid grey;
+    border-radius:5px;
+    box-shadow:none!important;
+    /* height:100px; */
+    width:240px;
+    margin-bottom: 80px;
+    
+}
+.img1{
+    margin-top:10px;
+}
+.num{
+    font-weight:bold;
+    font-size:30px;
+    color:teal;
+    padding-right:40px;
+    margin-top:5px;
+}
+.detail{
+    font-family:"Proxima Nova"; 
+    font-weight:bold;
+}
