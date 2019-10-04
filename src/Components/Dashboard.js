@@ -24,7 +24,7 @@ export default class Dashboard extends Component {
      <ul id="nav-mobile" className="right hide-on-med-and-down">
        <li> <i className="material-icons silver-text">notifications</i></li>
     <li><b style={{margin:"10px"}}>Arya</b></li>
-    <li className=" collection-item avatar"> <img  width="45px" height="45px"  className="circle" style={{marginRight:"20px"}}/></li>
+    <li className=" collection-item avatar"> <img src="" width="45px" height="45px"  className="circle" style={{marginRight:"20px"}}/></li>
      </ul>
    </div>
  </nav>

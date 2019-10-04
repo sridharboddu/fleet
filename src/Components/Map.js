@@ -32,7 +32,7 @@ class Dashboard extends React.Component {
         <TileLayer
           url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
         />
-          <Marker position={[16,78]}>
+          <Marker position={[50,10]}>
             <Popup>Hyderabad</Popup>
           </Marker>
       </LeafletMap>
