@@ -31,7 +31,7 @@ export default class Dashboard extends Component {
  <div className="row">
   <div className="col s1">
   <div className="symb">
-  <a className="btn-floating btn-small waves-effect waves-light teal left"><img src="location.png" class="loc"/></a>
+  <a href="Support" className="btn-floating btn-small waves-effect waves-light teal left"><img src="location.png" class="loc"/></a>
   </div><br></br>
   <div className="symbol">
   <a className="btn-floating btn-small waves-effect waves-light teal left"><img src="support.png" class="support"/></a>
