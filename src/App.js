@@ -1,29 +1,30 @@
 import React from 'react';
-
-import Register from './Components/Register';
 import Login from './Components/Login/Login';
-import Home from './Components/Home';
-import Dashboard from './Components/Dashboard'
+ import Register from './Components/Register/Register';
+import Dashboard from './Components/Dashboard';
 import {BrowserRouter,Route,Switch}  from 'react-router-dom';
 import Map from './Components/Map';
-import Admin from './Admin';
-// import Nav from './Components/Nav';
+import Icon from 'react-materialize/lib/Icon';
+ import Reg from './Components/Reg/Reg';
+import Support from './Components/Support';
+import Forgot from './Components/Login/Forgot';
+import Password from './Components/Login/Password';
+
 
 function App() {
  return (
    <BrowserRouter>   
-   <div className="App">
-     <Switch>
-    {/* <Nav/>  */}
-   
-     {/* <Route path='/Login' component={Login}/>
-      <Route path='/Register' component={Register}/>
-     <Route path='/Dashboard' component={Dashboard}/>      
-     <Route path='/Map' component={Map}/>   */}
-     <Login exact path="/"/>
+   <div className="App">     
+     <Switch>    
+     <Login exact path="/"/> 
+     <Forgot path="/Forgot"/>     
+     <Route path="/Password/:name" component={Password}/>    
+     <Register path="/Register"/>
+     <Support path="/Support"/>
      <Map path="/Map"/>
-     <Dashboard path="/Dashboard"/>
-     <Admin path="/Admin"/>
+     <Dashboard path="/Dashboard"/>     
+     <Icon path="/Icon"/>     
+     <Reg path="/Reg"/> 
      </Switch>
    </div>
    </BrowserRouter>

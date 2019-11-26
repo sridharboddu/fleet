@@ -3,8 +3,8 @@
  <head>
     <style>
         .leaflet-container{
-          height:700px;
-          width:100%;
+          height:530px;
+           width:100%; 
         }
       </style>
    <meta charset="utf-8" />
@@ -66,8 +66,38 @@
           $(this).css("border-color", "teal");
           }, function(){
           $(this).css("border-color", "grey");
+        
+         $(".dropdown-trigger").dropdowntrigger(); 
+         belowOrigin:true
         });
-  });
+        // $(".ion1").hide();
+        //  $(".ion").click(function () {
+        // var th = $(this);
+        // if ($(th).css('left') == '0px') {
+        //     console.log("ret");
+        //     $(th).animate({
+        //         "left": "80px"
+                
+        //     },20 ,function(){
+
+        //     $(".ion").hide();
+        //     $(".ion1").show();
+            
+        //   });
+        
+        // } else {
+        //   alert("ncvmndm");
+        //     $(".ion1").animate({
+        //         "right": "80px"
+        //     },20 , function(){
+        //       alert("hjefbwekhfj");
+        //     $(".ion1").hide();
+        //      $(".ion").show();
+        //     });
+        // }
+         
+      });
+  
    </script>
  </body>
 </html>

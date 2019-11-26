@@ -1,16 +1,16 @@
 
 .main{
-    background-color:#c9c5c5;
+    background-color:#F5F5F5;
 }
 .row .col.s1{
 
     background-color:white;
     position:absolute;
-    height: 520px;
+    height: 610px;
     width: 4%;
 }
 .btn-sch{
-    color:white;
+    color:#F8F8FB;
 }
 .sym{
     margin-top: 20px;
@@ -54,9 +54,9 @@ padding:6px;
 }
 .container{
     margin-top:20px;
-    margin-left:120px;
-    width:1031px;
-    height:500px;   
+    margin-left:80px;
+    width:1137px;
+    height:608px;   
 }
 .card-content{
   /* margin-top:40px;  */
@@ -68,27 +68,28 @@ padding:6px;
 .note{
     line-height:40px;
 }
-.text{
+.text12{
     font-family:"Proxima Nova";
     color:#585656;
-    font-weight:bold;
-    font-size:25px
+    font-weight:semibold;
+    font-size:25px;
 }
 .details{
     font-family:"Proxima Nova";
     color:#757575;
     font-weight:bold;
+    font-size:20px;
 }
 .img1{
     margin-left: 10px;
 }
 .small-card{
-    border:1px solid grey;
+    border:2px solid grey;
     border-radius:5px;
     box-shadow:none!important;
     /* height:100px; */
-    width:240px;
-    margin-bottom: 80px;
+    width:297px;
+    margin-bottom: 123px;
     
 }
 .img1{
@@ -102,6 +103,29 @@ padding:6px;
     margin-top:5px;
 }
 .detail{
-    font-family:"Proxima Nova"; 
-    font-weight:bold;
+    font-family:"Semibold 20px/24px Proxima Nova"; 
+    font-size:20px;
+}
+.notify{
+    color:#DcDcDc;
+}
+.profile-name{
+    font-family:'Montserrat';
+    color: #616161;
+    font-weight:normal;
+}
+.input-field .prefix.active{
+   color:black;
+}
+.ima-cir{
+    border-radius:50px;
+}
+.mi-arro{
+  top:0px;
+}
+.chev{
+margin-top: 2px;
+margin-left: 2px;
+width: 17px;
+height: 27px;
 }

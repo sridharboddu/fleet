@@ -1,17 +1,21 @@
 import React from 'react';
-import { subscribe } from 'mqtt-react';
+// import {Icon } from "react-materialize";
 import {divIcon} from "leaflet";
 import { renderToStaticMarkup } from 'react-dom/server';
- import './Map.css'; 
+//  import './Map.css';
+//  import {   IconCar  } from './Components/Mapleaflet';
  import {SideNav,Button,NavItem,Navbar,SideNavItem,Icon,Dropdown,Col,Row} from 'react-materialize';
 import { Map as LeafletMap, TileLayer, Marker, Popup } from 'react-leaflet';
 import Axios from 'axios';
-
+// import { IconCar } from '../Mapleaflet';
+// import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+// import {NavLink}  from 'react-router-dom';
 class Map extends React.Component {
   constructor(props) {
     super(props)
+  
     this.state = {
-       data:[],lat:"12.9716",log:"77.5946",show:false,wid:"4%",num:12,info:[],dat:[],inf:[],third:[]
+       data:[],lat:"12.9716",log:"77.5946",show:false,wid:"4%",num:12,info:[],
     }
   }
   componentDidMount(){
@@ -19,7 +23,7 @@ class Map extends React.Component {
     console.log(token)
     Axios.get("https://fleet-management-app.herokuapp.com/owned-devices/",
       {headers:{'Authorization':`Token ${token}`}})
-      .then(resp=>{
+      .then(resp=>{console.log(resp.data)
       this.setState({info:resp.data})});        
 }
    hideShow=(e)=>{
@@ -32,30 +36,7 @@ class Map extends React.Component {
     }
   }
 
-  componentWillReceiveProps(nextProps){
-    let prop=nextProps.data
-    let len=prop.length
-    let log=prop[len-1]
-    let lat=prop[len-2];    
-    if(prop && len>0){
-        this.setState({dat:log})
-    }
-    if(prop && len>1){
-       this.setState({inf:lat})
-    }    
-    console.log(prop)
-
-    let ms=prop.filter(i=>{
-      return i.I=="862549040626502"
-    })   
-    if(ms.length>0){
-      this.setState({third:ms})
-    }
-    console.log(this.state.third)
-}
-
   render() {
-   const{dat,inf,third} =this.state
     const iconMarkup = renderToStaticMarkup(<img src="car.png" />);
     const customMarkerIcon = divIcon({
       html: iconMarkup,
@@ -67,26 +48,17 @@ class Map extends React.Component {
     const truckMarkup = renderToStaticMarkup(<img src="bike.png" />);
     const customMarkertruck = divIcon({
       html: truckMarkup,
-    });      
+    });
+    
     return (
       <div>
         <Navbar brand={<a />} alignLinks="left">
-        {this.state.show ?<div onClick={this.hideShow}>
-             
-             <img class="navlog" src="logo.png"/>            
-             <img class="ion" src="chevleft.png"/>
-             
-          {/* <i className="material-icons ion">chevron_right</i> */}
-          </div>:(
-
           <div onClick={this.hideShow}>
              <img class="navlog" src="navlogo.png"/> 
              <img class="ion" src="chevright.png"/>
-            
+             <img class="ion1" src="chevleft.png"/>
           {/* <i className="material-icons ion">chevron_right</i> */}
           </div>
-          )
-  }
 
 <NavItem class="nItem1" color="black">
 <i className="material-icons prefix ser">search</i>
@@ -121,7 +93,9 @@ Logout
 </a>
 </Dropdown>
 </NavItem>
+
 </Navbar>
+
 <div className="row">
 {!this.state.show ?
     <div className="col s1" style={{backgroundColor:"white",
@@ -140,19 +114,15 @@ Logout
   <div className="row">
 
   {this.state.show ?
-    
     <div>
       <Col s={2}>
-      
       {/* <i className="material-icons ion">menu</i>  */}
-     
           <SideNavItem class="im-log" style={{listStyleType:"none"}} userView user={{
     //  background: 'https://placeimg.com/640/480/tech',
          // image: 'logo.png'
         
       }} /> 
 <SideNavItem  style={{listStyleType:"none"}}>
-
 <div class="row">
   <div class="col s4">
     <a className="btn-floating btn-small waves-effect waves-light teal loc-s"><img src="location.png" class="loc"/></a>
@@ -194,12 +164,12 @@ Logout
       <Col s={this.state.num}>
         <div class="M-card">
         <LeafletMap
-        center={[12.996061,77.697433]}
+        center={[this.state.lat,this.state.log]}
         draggable={true}
-        zoom={25}
-        maxZoom={19}
+        zoom={12}
+        maxZoom={15}
         attributionControl={false}
-        zoomControl={true}
+        zoomControl={false}
         doubleClickZoom={true}
         scrollWheelZoom={true}
         dragging={true}
@@ -209,39 +179,20 @@ Logout
         <TileLayer
           url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
         />
-         {dat.G && <React.Fragment>
-          <Marker position={[dat.G.slice(0,9),dat.G.slice(10,19)]}
-           icon={ customMarkertruck }>
-             <Popup> 
-         <p>{dat.I}</p>
-           </Popup>
-           </Marker>
-           </React.Fragment>}
-           {inf.G && <React.Fragment>
-          <Marker position={[inf.G.slice(0,9),inf.G.slice(10,19)]}
-           icon={ customMarkertruck }>
-             <Popup> 
-           <p>{inf.I}</p>
-           </Popup>
-           </Marker>
-           </React.Fragment>}
-           {third && 
-           <React.Fragment>
-             {
-               third.map(i=>(
-                 <React.Fragment>
-                   <Marker position={[i.G.slice(0,9),i.G.slice(10,19)]}
-           icon={ customMarkertruck }>
-             <Popup> 
-           <p>{i.I}</p>
-           </Popup>
-           </Marker>
-                 </React.Fragment>
-               ))
-             }
-           </React.Fragment>
-           
-           }
+         {
+           this.state.data.map(i=>(
+             <div>
+               <Marker
+        position={[i.lat,i.log]}
+        icon={ customMarkertruck }
+        >
+        <Popup>
+          {i.name}
+        </Popup>
+      </Marker>
+             </div>
+           ))
+         }
       </LeafletMap>
       </div>
       </Col>
@@ -251,6 +202,4 @@ Logout
   }
 }
 
-export default subscribe({
-  topic:'apeiron'
-})(Map)
+export default Map; 

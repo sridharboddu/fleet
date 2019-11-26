@@ -14,7 +14,7 @@ export default class Dashboard extends Component {
            <form>
        <div className="input-field" style={{position:"relative",left:'100px'}}>
          {/* <label class="label-icon" for="search"><i class="material-icons">search</i></label>  */}
-         <i className="material-icons prefix">search</i>
+         <i className="material-icons prefix active">search</i>
          <input id="search" type="text" style={{width:'300px'}} placeholder="Search"  required/>
          <a className="waves-effect waves-light btn white black-text btn-sch">Search</a>
        </div>
@@ -22,32 +22,32 @@ export default class Dashboard extends Component {
        </li>
      </ul>
      <ul id="nav-mobile" className="right hide-on-med-and-down">
-       <li> <i className="material-icons silver-text">notifications</i></li>
-    <li><b style={{margin:"10px"}}>Arya</b></li>
-    <li className=" collection-item avatar"> <img src="" width="45px" height="45px"  className="circle" style={{marginRight:"20px"}}/></li>
+       <li> <i className="material-icons notify">notifications</i></li>
+    <li><b class="profile-name" style={{margin:"10px"}}>Ramy</b></li>
+    <li className=" collection-item avatar"> <img src="pic1.png" width="45px" height="45px"  className="im-cir" style={{marginRight:"20px",marginTop:"5px"}}/></li>
      </ul>
    </div>
  </nav>
-  <div className="row">
+ <div className="row">
   <div className="col s1">
-  <div className="sym">
-  <a className="btn-floating btn-small waves-effect waves-light teal left"><i className="material-icons ">location_on</i></a>
-  
+  <div className="symb">
+  <a className="btn-floating btn-small waves-effect waves-light teal left"><img src="location.png" class="loc"/></a>
   </div><br></br>
   <div className="symbol">
-  <a className="btn-floating btn-small waves-effect waves-light teal left"><i className="material-icons ">filter_tilt_shift</i></a>
-  </div>
+  <a className="btn-floating btn-small waves-effect waves-light teal left"><img src="support.png" class="support"/></a>
+  </div><br></br>
+
   </div>
   <div className="side col s10">
-  <div></div>
-  <div></div>
   <div className="container">
      <div className="card center">
        <div className="card-content">
-           <img src="vrl.png" className="circle" width="100px" height="100px" margin-top="20px"/>
-             <h5 className="text">VRL Logistics</h5>
+        <div class="chev"><a href="Support"><img src="back.png"/></a></div>
+           <div class="full-con"><img src="vrl.png" className="ima-cir" width="100px" height="100px" margin-top="20px"/>
+             <h5 className="text12">VRL Logistics</h5>
              <p className="details">contact@vrllogistics.com</p>
              <p className="details">9900121231</p>
+             </div>
         </div>
         <div className="row">
           <div className="col s3">

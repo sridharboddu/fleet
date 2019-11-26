@@ -9,27 +9,31 @@
   "ws": [
     {
       "id": 1,
-      "name": "Hyderabad",
-      "lat": "17.385044",
-      "log":"78.486671"
+      "type":"Vehicle No 1",
+      "name": "Yelhanka",
+      "lat": "13.100485",
+      "log":"77.594009"
     },
     {
       "id": 2,
-      "name": "Mumbai",
-      "lat": "19.075983",
-      "log":"72.877655"
+      "type":"Vehicle No 2",
+      "name": "HSR Layout",
+      "lat": "12.908136",
+      "log":"77.647606"
     },
     {
       "id": 3,
-      "name": "Delhi",
-      "lat": "28.704060",
-      "log":"77.102493"
+      "type":"Vehicle No 3",
+      "name": "Bangalore Palace",
+      "lat": "13.003040",
+      "log":"77.583702"
     },
     {
       "id": 4,
-      "name": "Kolkata",
-      "lat": "22.572645",
-      "log":"88.363892"
+      "type":"Vehicle No 4",
+      "name": "K R Puram",
+      "lat": "13.096059",
+      "log":"77.453321"
     }
   ],
   "comments": [
