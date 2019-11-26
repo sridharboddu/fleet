@@ -30,7 +30,7 @@ import Axios from 'axios';
        }                               
     }                               
     ) 
-    .catch(error=>alert(error.non_field_errors))      
+    .catch(error=>alert("Entered Details are incorrect,Please Login with Valid Details"))      
   }
   
  render() {

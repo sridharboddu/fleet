@@ -47,11 +47,14 @@ class Map extends React.Component {
 
     let ms=prop.filter(i=>{
       return i.I=="862549040626502"
-    })   
+    }) 
+
+    console.log(ms)
+      
     if(ms.length>0){
-      this.setState({third:ms})
+      this.setState({third:ms[ms.length-1]})
     }
-    console.log(this.state.third)
+   
 }
 
   render() {
@@ -68,6 +71,10 @@ class Map extends React.Component {
     const customMarkertruck = divIcon({
       html: truckMarkup,
     });      
+    const idleMarkup = renderToStaticMarkup(<img src="idle.png" />);
+    const customMarkeridle = divIcon({
+      html: idleMarkup,
+    });
     return (
       <div>
         <Navbar brand={<a />} alignLinks="left">
@@ -225,20 +232,14 @@ Logout
            </Popup>
            </Marker>
            </React.Fragment>}
-           {third && 
+           {third.G && 
            <React.Fragment>
-             {
-               third.map(i=>(
-                 <React.Fragment>
-                   <Marker position={[i.G.slice(0,9),i.G.slice(10,19)]}
-           icon={ customMarkertruck }>
+             <Marker position={[third.G.slice(0,9),third.G.slice(10,19)]}
+           icon={ customMarkeridle}>
              <Popup> 
-           <p>{i.I}</p>
+           <p>{third.I}</p>
            </Popup>
            </Marker>
-                 </React.Fragment>
-               ))
-             }
            </React.Fragment>
            
            }

@@ -11,18 +11,22 @@ export default class Forgot extends Component {
   handleChange=(e)=>{
     this.setState({[e.target.name]:e.target.value})
   }   
+   
   
 
   submitHandler=(e)=>{
     let email=this.state.email;    
-    let data=this.state.data;    
-      Axios.post("https://fleet-management-app.herokuapp.com/rest-auth/password/reset/",{
-       email: email})
-    .then(resp=>alert(resp.data.detail))
+    let data=this.state.data;   
     
-     
-  }
-  
+    Axios.post("https://fleet-management-app.herokuapp.com/emailcheck/",{email})
+    .then(resp=>{this.setState({data:resp.data})
+         if(resp.data===true){          
+          Axios.post("https://fleet-management-app.herokuapp.com/rest-auth/password/reset/",{email})
+          .then(resp=>alert(resp.data.detail))
+         }
+        })
+        .catch(error=>alert("Email not exist,please register"))                                 
+  }  
     render() {
         return (
             <div>
