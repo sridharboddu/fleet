@@ -19,8 +19,9 @@ export default class password extends Component {
     let para=this.props.match.params;
     let new_password1=this.state.password;
     let new_password2=this.state.cpassword;    
-    let uid=para[0];
-    let token=para[1];      
+    let uid=this.props.match.params.uid;
+    let token=this.props.match.params.token;
+        
     Axios.post("https://fleet-management-app.herokuapp.com/rest-auth/password/reset/confirm/    ",{new_password1,new_password2,uid,token})
     .then(resp=>{alert(resp.data.detail)
     console.log(resp.data)

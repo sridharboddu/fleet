@@ -8,32 +8,10 @@
   ],
   "ws": [
     {
-      "id": 1,
-      "type":"Vehicle No 1",
-      "name": "Yelhanka",
-      "lat": "13.100485",
-      "log":"77.594009"
-    },
-    {
-      "id": 2,
-      "type":"Vehicle No 2",
-      "name": "HSR Layout",
-      "lat": "12.908136",
-      "log":"77.647606"
-    },
-    {
-      "id": 3,
-      "type":"Vehicle No 3",
-      "name": "Bangalore Palace",
-      "lat": "13.003040",
-      "log":"77.583702"
-    },
-    {
-      "id": 4,
-      "type":"Vehicle No 4",
-      "name": "K R Puram",
-      "lat": "13.096059",
-      "log":"77.453321"
+      "type": "AP 37 AN 3193cccc",
+      "name": "saimohan",
+      "title": "fndksjd",
+      "id": 1
     }
   ],
   "comments": [

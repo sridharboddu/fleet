@@ -24,7 +24,10 @@ import './Register.css'
      let email=this.state.email;
      let password1=this.state.password;
      let password2=this.state.confirmpassword;
-   
+
+     if(password1===password2){
+
+       
      Axios.post("https://fleet-management-app.herokuapp.com/rest-auth/registration/",{email,password1,password2})
      .then(resp=>{
       console.log(resp.data)
@@ -34,11 +37,21 @@ import './Register.css'
           this.setState({show:true})          
           localStorage.setItem("token",resp.data.key)
         }        
-      }     
+      }   
             )
-            .catch(error=>alert(error))
-            
-               
+            .catch(error=>{         
+              if(error=="Error: Request failed with status code 400"){ 
+              alert("A user is already registered with this e-mail address.")} 
+                 else if(error=="Error: Network Error"){
+                   alert("check your internet connection")
+                 }           
+                  
+                })
+                
+              }
+              else{
+                alert("match the passwords")
+              }
        }
 
  render() {

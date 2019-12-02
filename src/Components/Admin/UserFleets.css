@@ -1,0 +1,216 @@
+.card-body{
+    margin-top: 93px;
+margin-left: 106px;
+width: 1162px;
+height: 675px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 0px 6px #00000029;
+border-radius: 10px;
+opacity: 1;
+}
+.New{
+    top: 276px;
+margin-left: 86px;
+width: 79px;
+height: 32px;
+text-align: left;
+font-size: Semibold 28px;
+font-family: Proxima Nova;
+letter-spacing: 0.56px;
+color: #616161;
+opacity: 1;
+}
+.pro-pic{
+    margin-top: 1px;
+margin-left: 85px;
+border-radius: 100%; 
+width: 120px;
+height: 120px;
+opacity: 1;
+}
+.back{
+    margin-top: 13px;
+margin-left: 14px;
+width: 12px;
+height: 23px;
+opacity: 1;
+}
+.head{
+    position: absolute;
+    margin-top: 15px;
+margin-left: 56px;
+width: 110px;
+height: 29px;
+text-align: left;
+font-size:  26px;
+font-family: Proxima Nova;
+letter-spacing: 0;
+color: #000000;
+opacity: 1;
+}
+.head1{
+    position: absolute;
+    margin-top: 55px;
+margin-left: 56px;
+width: 243px;
+height: 28px;
+text-align: left;
+font-size: 25px;
+font-family: Proxima Nova;
+letter-spacing: 0;
+color: #565656;
+opacity: 1;
+}
+.head2{
+    position: absolute;
+    margin-top: 92px;
+margin-left: 56px;
+width: 180px;
+height: 28px;
+text-align: left;
+font-size: 25px;
+font-family: Proxima Nova;
+letter-spacing: 0;
+color: #858585;
+opacity: 1;
+}
+.card-subtotal{
+    margin-top: 45px;
+margin-left: 76px;
+width: 600px;
+height: 150px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 0px 10px #00000029;
+border-radius: 10px;
+opacity: 1;
+}
+.head3{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 332px;
+    height: 28px;
+    text-align: left;
+    font-size:  25px; 
+    font-family:Proxima Nova;
+    letter-spacing: 0;
+    opacity: 1;
+    color: #9B9999;
+}
+.total1{
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 10px;
+width: 135px;
+height: 28px;
+text-align: left;
+font-size:  25px;
+font-family: Proxima Nova;
+letter-spacing: 0;
+color: #1A1919;
+
+}
+.head4{
+    position: absolute;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    width: 332px;
+    height: 28px;
+    text-align: left;
+    font-size:  25px;
+    font-family:Proxima Nova;
+    letter-spacing: 0;
+    opacity: 1;
+    color: #9B9999;
+}
+.total2{
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 10px;
+width: 135px;
+height: 28px;
+text-align: left;
+font-size: 25px; 
+font-family:Proxima Nova;
+letter-spacing: 0;
+color: #1A1919;
+}
+.head5{
+    position:absolute;
+    margin-top: 87px;
+margin-left: 20px;
+width: 118px;
+height: 28px;
+text-align: left;
+font-size: 25px;
+font-family: Proxima Nova;
+letter-spacing: 0;
+color: #9B9999;
+}
+.total3{
+    position:absolute;
+    margin-top: 1px;
+margin-left: 75px;
+width: 160px;
+height: 28px;
+text-align: left;
+font-size:  25px;
+font-family: Proxima Nova;
+letter-spacing: 0;
+color: #1A1919;
+}
+.button{
+    position:absolute;
+    top: 216px;
+    margin-left: 550px;
+    width: 110px;
+    height: 35px;
+    background: #12BE93 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    opacity: 1;
+}
+.button1{
+    position:absolute;
+    margin-top: 10px;
+margin-left: 475px;
+width: 110px;
+height: 35px;
+background: #12BE93 0% 0% no-repeat padding-box;
+border-radius: 5px;
+opacity: 1;
+}
+.button2{
+    position:absolute;
+    margin-top: 87px;
+margin-left: 475px;
+width: 110px;
+height: 35px;
+background: #12BE93 0% 0% no-repeat padding-box;
+border-radius: 5px;
+opacity: 1; 
+}
+.newuser-locate{
+    margin-top: 1px;
+    margin-left: 35px;
+    width: 65px;
+    height: 25px;
+    text-align: left;
+    font-size:  22px;
+    font-family:  Proxima Nova;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
+}
+.newuser-locate1{
+    margin-top: 1px;
+    margin-left: 25px;
+    width: 65px;
+    height: 25px;
+    text-align: left;
+    font-size:  22px;
+    font-family:  Proxima Nova;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
+}

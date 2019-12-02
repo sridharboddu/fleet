@@ -30,7 +30,14 @@ import Axios from 'axios';
        }                               
     }                               
     ) 
-    .catch(error=>alert("Entered Details are incorrect,Please Login with Valid Details"))      
+    .catch(error=>{         
+      if(error=="Error: Request failed with status code 400"){ 
+      alert("Entered details are invalid, please login with valid details")} 
+         else if(error=="Error: Network Error"){
+           alert("check your internet connection")
+         }           
+          
+        })      
   }
   
  render() {
@@ -55,6 +62,7 @@ import Axios from 'axios';
                <div className="row ma-in">
                  <div className="input-field col s12 log-input">
                    <input  id="password" type="password" name='password' className="box1 validate" placeholder="Password" pattern=".{6,}"  title="Six or more characters" onChange={this.handleChange} required/>
+                   <i class=" icon2  material-icons" >lock</i>
                    <i class=" icon2  material-icons" >lock</i>
                    <label className="active">Password</label>
                  </div>
