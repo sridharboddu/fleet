@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import Axios from 'axios'
+import Axios from 'axios';
+import {NavLink,Link,BrowserRouter,withRouter} from 'react-router-dom';
 
 export default class password extends Component {
   constructor(props) {
     super(props)  
     this.state = {
-        password:'',cpassword:'',data:[],details:[]
+        password:'',cpassword:'',data:[],details:[],message:'',errorMessage:''
     }
   }
   
@@ -21,11 +22,21 @@ export default class password extends Component {
     let new_password2=this.state.cpassword;    
     let uid=this.props.match.params.uid;
     let token=this.props.match.params.token;
+
+    if(new_password1===new_password2){
+      Axios.post("https://fleet-management-app.herokuapp.com/rest-auth/password/reset/confirm/    ",{new_password1,new_password2,uid,token})
+      .then(resp=>{
+        this.setState({message:resp.data.detail})
+      })
+      .catch(error=>{
+        this.setState({errorMessage:"invalid token"})
+      })
+    }
+    else{
+      this.setState({errorMessage:"please match the password"})
+    }
         
-    Axios.post("https://fleet-management-app.herokuapp.com/rest-auth/password/reset/confirm/    ",{new_password1,new_password2,uid,token})
-    .then(resp=>{alert(resp.data.detail)
-    console.log(resp.data)
-    });
+    
 
   }
   
@@ -33,6 +44,18 @@ export default class password extends Component {
      console.log(this.props.match.params)       
         return (
             <div>
+              {  this.state.message && 
+     <div className="card modals">
+     {/* <img class="component" src="component.png"></img> */}
+     <span className="content-log">{this.state.message}</span>
+    <Link to="Login"><button class="btn valign-wrapper  modal-trigger flat-btn">ok</button></Link>
+     </div>}
+     {  this.state.errorMessage && 
+     <div className="card modals">
+     {/* <img class="component" src="component.png"/> */}
+     <span className="content-log">{this.state.errorMessage}</span>
+    <Link to="/Forgot"><button class="btn valign-wrapper  modal-trigger flat-btn">ok</button></Link>
+     </div>}
               
                 <div  style={{position:"absolute",top:"35%",left:"25%"}} >
                  <div class="row">

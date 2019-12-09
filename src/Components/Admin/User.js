@@ -7,6 +7,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
  import {SideNav,Button,NavItem,Navbar,SideNavItem,Icon,Dropdown,Col,Row} from 'react-materialize';
 import { Map as LeafletMap, TileLayer, Marker, Popup } from 'react-leaflet';
 import Axios from 'axios';
+import UserFleets from './UserFleets';
 
 class User extends React.Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class User extends React.Component {
     }
   }
   componentDidMount(){
-    let token="c7f1ad57eec4fb2339e91636ee7ca6d3774bbde8";    
+    let token=localStorage.getItem("token");    
     Axios.get("https://fleet-management-app.herokuapp.com/add-list-users/",
       {headers:{'Authorization':`Token ${token}`}})
       .then(resp=>{
@@ -45,12 +46,11 @@ class User extends React.Component {
     else{
       this.setState({num:12})
     }
-  }
-
+  } 
   render() {   
     console.log(this.state.userDetails)
     return (
-      <div class="user-admin" >
+      <div class="user-admin" >       
         <Navbar brand={<a />} alignLinks="left">
         {this.state.show ?<div onClick={this.hideShow}>
              
@@ -171,12 +171,14 @@ Logout
         {
           this.state.info.map(i=>(
             <React.Fragment>
-             <div className="card-user2" onClick={e=>this.showUserDetails(i.email,i.username)}>
+              <Link to="/UserFleets">
+             <div className="card-user2" onMouseEnter={e=>this.showUserDetails(i.email,i.username)} onClick={e=>this.props.clickUserFleet(i.email,i.username)}>
       <img src="pic1.png" alt="" class="circle"/>
       <p1 class="test1-user">{i.email}</p1>
       <p2 class="test2-user">{i.username}</p2>
       <p3 class="test3-user">{i.mobile}</p3>
             </div>
+            </Link>
             </React.Fragment>
           ))
         }

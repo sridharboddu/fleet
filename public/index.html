@@ -28,7 +28,7 @@
      work correctly both with client-side routing and a non-root public URL.
      Learn how to configure a non-root public URL by running npm run build.
    -->
-   <title>React App</title>
+   <title>Fleet Management</title>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
@@ -68,35 +68,29 @@
         
          $(".dropdown-trigger").dropdowntrigger(); 
          belowOrigin:true
-        });
-        // $(".ion1").hide();
-        //  $(".ion").click(function () {
-        // var th = $(this);
-        // if ($(th).css('left') == '0px') {
-        //     console.log("ret");
-        //     $(th).animate({
-        //         "left": "80px"
-                
-        //     },20 ,function(){
-
-        //     $(".ion").hide();
-        //     $(".ion1").show();
-            
-        //   });
-        
-        // } else {
-        //   alert("ncvmndm");
-        //     $(".ion1").animate({
-        //         "right": "80px"
-        //     },20 , function(){
-        //       alert("hjefbwekhfj");
-        //     $(".ion1").hide();
-        //      $(".ion").show();
-        //     });
-        // }
+        });     
          
-      });
-  
+      });  
+
+
+   //modal function
+
+
+   document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, options);
+  });
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+
+   //modal
+
+
+
    </script>
  </body>
 </html>

@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import Axios from 'axios'
+import Axios from 'axios';
+import {Link,NavLink} from 'react-router-dom'
 
 export default class Forgot extends Component {
   constructor(props) {
     super(props)  
     this.state = {
-       email:'',
+       email:'',errorMessage:'',opacity:1,data:''
     }
   }
   handleChange=(e)=>{
@@ -22,16 +23,41 @@ export default class Forgot extends Component {
     .then(resp=>{this.setState({data:resp.data})
          if(resp.data===true){          
           Axios.post("https://fleet-management-app.herokuapp.com/rest-auth/password/reset/",{email})
-          .then(resp=>alert(resp.data.detail))
+          .then(resp=>{
+            this.setState({
+              data:resp.data.detail,
+              opacity:0.2
+            })
+          })
          }
         })
-        .catch(error=>alert("Email not exist,please register"))                                 
+        .catch(error=>{
+          this.setState({
+            errorMessage:"Enter registered email id ",
+            opacity:0.2
+          })
+        })                                 
   }  
+  refreshPage=()=>{
+    window.location.reload(false);
+  }
     render() {
         return (
             <div>
+
+{  this.state.errorMessage && 
+     <div className="card modals">
+     <img class="component" src="component.png"></img>
+     <span className="content-log">{this.state.errorMessage}</span>
+    <button class="btn valign-wrapper  modal-trigger flat-btn" onClick={this.refreshPage} >ok</button>
+     </div>}
+     {  this.state.data && 
+     <div className="card modals">
+     <img class="component" src="mail-sent.png" width="60px"></img>
+     <span className="content-log">{this.state.data}</span>    
+     </div>}
               
-                <div  style={{position:"absolute",top:"35%",left:"25%"}} >
+                <div  style={{position:"absolute",top:"35%",left:"23%",opacity:this.state.opacity}} >
                  <div class="row">
     <div class="col s12">
       <div class="card" style={{width:"648px"}}>
